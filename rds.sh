@@ -22,11 +22,10 @@ while [[ $# -gt 0 ]]; do
             shift 2
             ;;
         *)
-            #OPTIONS="$OPTIONS $1"
             OPTIONS+=("$1")
             shift
             ;;
     esac
 done
 
-docker run --rm --name port7777 --env-file .env."$environment" -it -p 7777:7777 port7777/7777:1 --skip-install --verbose --region "$REGION" "${OPTIONS[@]}"
+docker run --rm --name port7777 --env-file .env."$environment" -it -p 7777:7777 --platform linux/amd64 port7777/7777:1 --skip-install --verbose --region "$REGION" "${OPTIONS[@]}"
