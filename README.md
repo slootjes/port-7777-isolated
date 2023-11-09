@@ -2,6 +2,11 @@
 
 A small wrapper tool for [Port7777](https://port7777.com/) that makes sure 7777 can only run in isolation with minimal access. 
 
+## Prerequisites
+
+- Docker
+- Port7777 license
+
 ## Installation
 
 - Create a new CloudFormation stack with _cloudformation.yml_ as input and "port7777" as name
